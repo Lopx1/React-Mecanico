@@ -6,7 +6,7 @@
       // Define el nombre base del proyecto
       const basePath = "/React-Mecanico";
 
-      // Verifica si la URL ya incluye el basePath
+      // Si la URL ya incluye el basePath correctamente, no hacer nada
       if (!window.location.pathname.startsWith(basePath)) {
         // Redirige asegurando que no se pierda la búsqueda y hash
         const newPath =
@@ -15,7 +15,11 @@
           window.location.search +
           window.location.hash;
 
-        // Redirige asegurando que esté dentro del contexto del proyecto
+        // Redirige al contexto correcto
+        window.location.replace(newPath);
+      } else {
+        // Si ya está en el basePath pero no encuentra un recurso válido, redirige a la raíz
+        const newPath = basePath + "/";
         window.location.replace(newPath);
       }
     </script>
