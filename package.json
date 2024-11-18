@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://lopx1.github.io/React-Mecanico",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
