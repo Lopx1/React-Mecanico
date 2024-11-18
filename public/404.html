@@ -3,11 +3,16 @@
   <head>
     <meta http-equiv="refresh" content="0; URL=/" />
     <script>
-      // Redirige al usuario a la ruta raíz con el hash de la URL original
-      window.location.href = "/React-Mecanico" + window.location.pathname;
+      // Verifica si ya estamos en la ruta correcta
+      const basePath = "/React-Mecanico";
+      if (!window.location.pathname.startsWith(basePath)) {
+        // Si no, redirige correctamente
+        window.location.href = basePath + window.location.pathname + window.location.search;
+      }
     </script>
   </head>
   <body>
     Redirigiendo...
   </body>
 </html>
+
