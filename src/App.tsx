@@ -11,7 +11,7 @@ import Reviews from './pages/Reviews';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/React-Mecanico">
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
