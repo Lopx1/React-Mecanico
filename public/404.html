@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
+    <meta charset="UTF-8" />
     <script>
-      // Verifica si ya estamos en la ruta correcta
+      // Define el nombre base del proyecto
       const basePath = "/React-Mecanico";
+
+      // Verifica si la URL ya incluye el basePath
       if (!window.location.pathname.startsWith(basePath)) {
-        // Si no, redirige correctamente
-        window.location.href = basePath + window.location.pathname + window.location.search;
+        // Redirige asegurando que no se pierda la búsqueda y hash
+        const newPath =
+          basePath +
+          window.location.pathname +
+          window.location.search +
+          window.location.hash;
+
+        // Redirige asegurando que esté dentro del contexto del proyecto
+        window.location.replace(newPath);
       }
     </script>
   </head>
@@ -15,4 +24,3 @@
     Redirigiendo...
   </body>
 </html>
-
